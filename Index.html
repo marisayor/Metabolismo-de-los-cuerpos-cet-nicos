@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Esquema Interactivo: Regulación Sistémica de la Cetogénesis</title>
+<link rel="stylesheet" href="index.css">
+    </head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="header-text">
+            <h1>Regulación Sistémica e Interorganísmica de la Cetogénesis</h1>
+            <p class="instruccion">👆 Toca cada tejido para ver los mecanismos moleculares</p>
+        </div>
+        <button class="exit-btn" id="exitBtn">✕ Salir</button>
+    </header>
+
+    <div class="flow-wrapper">
+        
+        <!-- NODO 1: TEJIDO ADIPOSO -->
+        <div class="tissue-node" data-target="popup1">
+            <div class="node-header">
+                <div class="left">
+                    <div class="subtitle">Origen de Sustratos</div>
+                    <h2>Tejido Adiposo</h2>
+                    <div class="main-event">Lipólisis y Movilización de Ácidos Grasos Libres</div>
+                </div>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div class="popup-content" id="popup1">
+                <h3>Mecanismo de Activación</h3>
+                <ul>
+                    <li><strong>Señal neuroendocrina:</strong> Disminución del cociente insulina/glucagón e incremento del tono simpático (catecolaminas).</li>
+                    <li><strong>Transducción de señales:</strong> Activación de la adenilato ciclasa que eleva el AMPc intracelular y activa la Proteína Quinasa A (PKA).</li>
+                    <li><strong>Efector enzimático:</strong> La PKA fosforila e incrementa la actividad de la <strong>Lipasa Sensible a Hormonas (LSH)</strong> y la perilipina.</li>
+                    <li><strong>Eflujo metabólico:</strong> Hidrólisis de triacilgliceroles que resulta en la liberación masiva de ácidos grasos libres (AGL) y glicerol al plasma sanguíneo.</li>
+                </ul>
+                <button class="btn-schema" data-schema="nodo1">📊 Ver esquema</button>
+            </div>
+        </div>
+
+        <!-- CONECTOR 1 -->
+        <div class="vector-arrow">
+            <span>AGL en Plasma</span>
+            <span class="arrow-symbol">▼</span>
+        </div>
+
+        <!-- NODO 2: HÍGADO -->
+        <div class="tissue-node" data-target="popup2" style="border-color: #93c5fd;">
+            <div class="node-header">
+                <div class="left">
+                    <div class="subtitle">Órgano Sintetizador</div>
+                    <h2>Hígado (Hepatocito)</h2>
+                    <div class="main-event">β-oxidación y Desvío de Flujos hacia la Cetogénesis</div>
+                </div>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div class="popup-content" id="popup2">
+                <h3>Dinámica Mitocondrial</h3>
+                <ul>
+                    <li><strong>Desinhibición del transporte:</strong> La caída de Malonil-CoA inactiva la Acetil-CoA Carboxilasa (ACC), desinhibiendo a la <strong>Carnitina Palmitoiltransferasa-1 (CPT-1)</strong> para el ingreso de AGL a la mitocondria.</li>
+                    <li><strong>Saturación de la β-oxidación:</strong> La degradación acelerada de ácidos grasos eleva las relaciones mitocondriales NADH/NAD⁺ y Acetil-CoA/CoASH.</li>
+                    <li><strong>Desvío del Oxalacetato:</strong> Las altas concentraciones de NADH inducen la conversión de oxalacetato hacia malato para alimentar la gluconeogénesis, ralentizando el ciclo de Krebs.</li>
+                    <li><strong>Vía de la HMG-CoA Sintasa:</strong> El exceso de Acetil-CoA remanente es condensado por la <strong>HMG-CoA Sintasa Mitocondrial</strong> (enzima marcapasos) para sintetizar acetoacetato y β-hidroxibutirato.</li>
+                </ul>
+                <button class="btn-schema" data-schema="nodo2">📊 Ver esquema</button>
+            </div>
+        </div>
+
+        <!-- CONECTOR 2 -->
+        <div class="vector-arrow">
+            <span>Cuerpos Cetónicos</span>
+            <span class="arrow-symbol">▼</span>
+        </div>
+
+        <!-- NODO 3: CEREBRO -->
+        <div class="tissue-node" data-target="popup3">
+            <div class="node-header">
+                <div class="left">
+                    <div class="subtitle">Tejido Diana</div>
+                    <h2>Tejido Cerebral</h2>
+                    <div class="main-event">Cetólisis y Adaptación Metabólica</div>
+                </div>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div class="popup-content" id="popup3">
+                <h3>Integración y Consumo</h3>
+                <ul>
+                    <li><strong>Translocación en la Barrera Hematoencefálica:</strong> Captación endotelial y neuronal de acetoacetato y β-hidroxibutirato a través de membranas mediante el incremento en la expresión de transportadores de monocarboxilatos (MCT1 y MCT2).</li>
+                    <li><strong>Reversión de la Oxidación:</strong> El β-hidroxibutirato plasmático es oxidado a acetoacetato en la matriz mitocondrial de las neuronas por la enzima β-hidroxibutirato deshidrogenasa, generando una molécula de NADH mitocondrial (potencial reductor).</li>
+                    <li><strong>Activación por la Enzimática Clave (Tioforasa):</strong> La enzima Succinil-CoA:3-cetoácido CoA-transferasa (Tioforasa) transfiere el grupo Coenzima A desde el succinil-CoA hacia el acetoacetato, transformándolo en acetoacetil-CoA.</li>
+                    <li><strong>Clivaje e Ingreso al Ciclo de Krebs:</strong> La enzima tiolasa escinde el acetoacetil-CoA utilizando una molécula de CoASH libre, lo que produce dos moléculas de Acetil-CoA. Estas ingresan inmediatamente al ciclo del ácido cítrico local para la síntesis de ATP por fosforilación oxidativa.</li>
+                    <li><strong>Asimetría Sistémica (Nota de Control Epistémico):</strong> El tejido hepático es incapaz de degradar o consumir los cuerpos cetónicos que él mismo sintetiza debido a la ausencia de la enzima Tioforasa en los hepatocitos. Esto garantiza mecánicamente el flujo unidireccional de energía hacia los tejidos extrahepáticos.</li>
+                </ul>
+                <button class="btn-schema" data-schema="nodo3">📊 Ver esquema</button>
+            </div>
+        </div>
+
+    </div><!-- /flow-wrapper -->
+</div><!-- /container -->
+
+<!-- MODAL (lightbox) -->
+<div class="modal-overlay" id="modalOverlay">
+    <div class="modal-content">
+        <button class="modal-close-btn" id="modalCloseBtn">✕ Cerrar</button>
+        <img id="modalImage" src="" alt="Esquema del nodo">
+    </div>
+</div>
+<script src="index.js"></script>
+</body>
+</html>
